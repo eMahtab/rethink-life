@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>What you wanna before you die</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="stylesheet" href="/libs/css/bootstrap.min.css"/>  
+    <link rel="stylesheet" href="/libs/css/font-awesome.min.css"/>  
+    <link rel="stylesheet" href="/libs/css/custom.css"/>  
+    <link rel="stylesheet" href="/libs/css/toaster.min.css"/>  
+    
+    <!--<script src="/libs/js/jquery-3.0.0.min.js" type="text/javascript"></script>-->
+    <script src="/libs/js/jquery.min.js" type="text/javascript"></script>
+	<!--<script src="/libs/js/newsbox.min.js" type="text/javascript"></script>-->
+    <script src="/libs/js/jquery.bootstrap.newsbox.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/js/angular.min.js" type="text/javascript"></script>
+    <script src="/libs/js/main.js" type="text/javascript"></script>
+    
+    <script src="/libs/js/spin.min.js" type="text/javascript"></script>
+    <script src="/libs/js/angular-spinner.min.js" type="text/javascript"></script>    
+</head>
+
+<body ng-app="mean" ng-controller="MainCtrl">
+	
+         
+    <toaster-container></toaster-container>
+    <br/>
+	<div class="container">
+      <div class="row">
+		<div class="col-sm-offset-3 col-md-7">
+			
+          <div class="panel panel-default">
+			<div class="panel-heading">
+				<span class="glyphicon glyphicon-list-alt"></span>
+                <span><b> What you wanna do before you die ...</b></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                <span><a href="/"><span class="glyphicon glyphicon-refresh"></span>Load messages</a></span>
+            </div>
+			<div class="panel-body fixed-panel" >
+			  <div ng-cloak class="row">
+                  <div class="spinner" ng-show="formModel.loadingData">
+                       <span us-spinner></span>
+                        <br/><br/><br/><br/><br/>
+                       <p style="text-align:center">Loading Awesomeness ... </p>      
+                 </div> 
+                  
+				<div class="col-xs-12">					
+                  <ul class="demo1"> 
+                        
+                   <li class="news-item" ng-repeat="item in records" on-last-element>
+					<table>
+					 <tr>
+					 <td>
+                      <img height="60" ng-src="/images/{{($index+11) % 10}}.png"  class="img-circle" />                      </td>
+						 <td style="">{{item.message}} <span class="text-primary">@{{item.username}}</span></td>
+						 </tr>
+						  </table>
+						</li>
+						
+                    </ul>                    
+				</div>
+			  </div>
+			</div>            
+			<div class="panel-footer"></div>              
+		   </div>
+		</div>          
+	</div>
+        
+        
+        <div class="row">
+          <div class="col-sm-offset-3 col-xs-7">
+              <p style="text-align:center" ng-cloak class="alert alert-danger" 
+                 ng-show="formModel.messageEmpty">
+               Oh gosh ! Really you don't wanna do anything before you are gone !!! ohh... come on 
+              </p>
+              
+              <p style="text-align:center" ng-cloak class="alert alert-danger"
+                 ng-show="formModel.messageTooLong">
+                 You are trying to do too many things buddy, just 150 characters !!! 
+              </p>
+              
+             <p style="text-align:center" ng-cloak class="alert alert-danger"
+               ng-show="formModel.usernameEmpty">
+                 Looks like you forgot to mention your name !!!</p>
+              
+              <p style="text-align:center" ng-cloak class="alert alert-danger"
+               ng-show="formModel.usernameTooLong">
+                 Sorry we can't handle such a long name, please type a short name !!!</p> 
+              
+          </div>
+        </div>
+        
+      <div class="row">
+       <div  class="">
+           <form  name="messageForm" 
+                 novalidate="novalidate" ng-submit="onSubmit()" id="message-box">
+      
+               <div class="form-group" >
+                 <textarea   class="col-sm-offset-4 col-xs-5" required  
+                           ng-model="formModel.message" 
+                      style="border:double 4px #2B689D;border-radius: 0.5em;" 
+                      rows="3"  id="message" 
+                      placeholder="Choose your life's best 150 characters followed by @ and your name, then shoot it.."></textarea> 
+                 <br/> &nbsp; 
+                 <button class=" btn btn-primary" type="submit">Shoot it</button>
+              </div> 
+               <br/>
+              <p class="col-sm-offset-3 col-xs-7 alert alert-success" 
+                 style="text-align:center">
+                 e.g. Will love to go to antarctica for adventure, feels kinda penguin@amy 
+              </p>
+               <br/>
+         </form>
+      </div>            
+     </div>  
+        
+        
+</div>
+
+<script src="/libs/js/angular-animate.min.js"></script>
+<script src="/libs/js/toaster.min.js"></script> 
+</body>
+
+</html>
