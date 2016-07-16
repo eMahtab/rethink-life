@@ -13,11 +13,6 @@
     margin-right:0px !important; /*override*/
 }
 
-/*.fixed-panel {
-  min-height: 500px !important;
-  max-height: 10 !important;  
-}*/
-
 .pagination a
 {
     color:#555;
@@ -25,14 +20,6 @@
 td {
   padding: 0px 5px 0px 5px !important;
  }
-
- .panel-body  {
-    /*word-break:break-all*/
-}
-
-textarea{
-    
-}
 
 a:hover{
     text-decoration: none !important;

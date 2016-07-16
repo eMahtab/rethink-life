@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <link rel="icon" href="/images/favicon.png" type="image/x-icon">
     <title>Say your heart out ...</title>
-    <meta name='viewport' content='user-scalable=no'>
+    <!--<meta name='viewport' content='user-scalable=no'>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <link rel="stylesheet" href="/libs/css/bootstrap.min.css"/>  
@@ -40,7 +41,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span><a href="/"><span class="glyphicon glyphicon-refresh"></span>Load messages</a></span>
             </div>
-			<div class="panel-body fixed-panel" >
+			<div class="panel-body" >
 			  <div ng-cloak class="row">
                   <div class="spinner" ng-show="formModel.loadingData">
                        <span us-spinner></span>
@@ -95,7 +96,7 @@
         </div>
         
       <div class="row">
-       <div  class="">
+       
            <form  name="messageForm" 
                  novalidate="novalidate" ng-submit="onSubmit()" id="message-box">
       
@@ -115,7 +116,7 @@
               </p>
                <br/>
          </form>
-      </div>            
+                  
      </div>  
         
         <br/>
@@ -125,7 +126,7 @@
             Made with the help of <span style="text-decoration:line-through">5 </span>15 cups of coffee by
           </span>            
           <a style="color:white" href="https://twitter.com/alammahtab08" target="_blank">@alammahtab08</a>
-        </span>
+        </span><br/>
        </div>
         
 </div>
