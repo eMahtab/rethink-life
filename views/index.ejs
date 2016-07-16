@@ -72,7 +72,7 @@
         
         
         <div class="row">
-          <div class="col-sm-offset-3 col-xs-7">
+          <div class="col-sm-offset-3 col-sm-7 col-xs-12">
               <p style="text-align:center" ng-cloak class="alert alert-danger" 
                  ng-show="formModel.messageEmpty">
                Oh gosh ! Really you don't wanna do anything before you are gone !!! ohh... come on 
@@ -100,16 +100,21 @@
                  novalidate="novalidate" ng-submit="onSubmit()" id="message-box">
       
                <div class="form-group" >
-                 <textarea   class="col-sm-offset-4 col-xs-5" required  
+                  <textarea   class="col-sm-offset-4 col-sm-5 col-xs-12 " required  
                            ng-model="formModel.message" 
                       style="border:double 4px #2B689D;border-radius: 0.5em;" 
                       rows="3"  id="message" 
                       placeholder="Choose your life's best 150 characters followed by @ and your name, then shoot it.."></textarea> 
-                 <br/> &nbsp; 
-                 <button class=" btn btn-primary" type="submit">Shoot it</button>
+                    <br/>
+                  
+                   <button style="margin-left: 5px" 
+                           class="col-sm-1 col-xs-12 btn btn-primary" type="submit">
+                       Shoot it</button>
+                   
+                   <br/>
               </div> 
-               <br/>
-              <p class="col-sm-offset-3 col-xs-7 alert alert-success" 
+               <br/><br/><br class="rwd-break" /><br class="rwd-break" />
+              <p class="col-sm-offset-3 col-xs-12 col-sm-7 alert alert-success" 
                  style="text-align:center">
                  e.g. Will love to go to antarctica for adventure, feels kinda penguin@amy 
               </p>
@@ -118,9 +123,9 @@
                   
      </div>  
         
-        <br/>
+    
         <div class="row">
-         <div class="col-md-12">  
+         <div class="col-sm-12 col-xs-12">  
           <span style="font-weight:bold;">
             Made with the help of <span style="text-decoration:line-through">5 </span>15 cups of coffee by
           </span>            
